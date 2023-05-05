@@ -18,7 +18,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 
 # from dotenv import load_dotenv
 
-load_dotenv()
+# load_dotenv()
 # environment variables.
 
 SECRET_K = os.environ.get("SECRET_K")
