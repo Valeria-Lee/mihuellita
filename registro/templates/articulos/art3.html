@@ -1,0 +1,124 @@
+{% extends '../layouts/base.html' %}
+
+{% block content %}
+    <style>
+        /* Estilo del main y de cada article */
+        .main {
+            width: 80%;
+            margin: auto;
+            font-family: 'Roboto', sans-serif;
+            font-size: 1.2rem;
+        }
+
+        article {
+            padding: 1.5em;
+            margin-top: 0.8em;
+        }
+
+        article h2 { 
+            font-weight: 800;
+            font-size: 1.5em;
+        }
+
+        .author-name{
+            font-size: 0.85em;
+        }
+
+        article p {
+            margin-top: 1.2rem;
+            text-align: justify;  
+            line-height: 1.5;
+        }
+
+        /* Imagen de inicio */
+        .article-image {
+            width: 100%;
+            margin-top: 1rem;
+            margin-bottom: 1rem;
+        }
+
+        .container-section {
+            margin-top: 2.3rem;
+            overflow: hidden;
+        }
+
+        .container-section h3 {
+            font-weight: bold;
+        }
+
+        .container-section ul {
+            list-style-position: inside;
+        }
+
+        .list {
+            margin-top: 1rem;
+        }
+
+        article a {
+            color: #333;
+            text-decoration: underline;
+        }
+
+        /* La imagen que se despliega a la derecha del texto */
+        .section-image {
+            width: 40%;
+            float: right;
+            margin-top: 1rem;
+            margin-left: 2rem;
+        }
+    </style>
+    <main class="main">
+        <article>
+            <h2>¿Qué es un estilo de vida sostenible y cómo lograrlo?</h2>
+            <p class="author-name">Elaborado por: <b>Miguel Alejandro Torruco</b>, el 1 de mayo de 2023</p>
+            <img src="https://foretica.org/wp-content/uploads/2018/09/imagen_vida_sostenible.jpg" class="article-image" alt="Un salón de clases">
+            <p>
+                A consecuencia del agotamiento de los recursos naturales, urge un modelo respetuoso y saludable que asegure el futuro de las nuevas
+                generaciones. Llevar un estilo de vida sostenible se trata de vivir en base a un compromiso con el medio ambiente y se puede alcanzar introduciendo 
+                pequeñas acciones en nuestro día a día.
+            </p>
+            <div class="container-section">
+                <h3>¿Qué es un estilo de vida sostenible?</h3>
+                <img src="https://www.eleconomista.net/__export/1554220869048/sites/prensagrafica/img/2019/04/01/20190401_092732071_fecm23022019corfao9.jpg_1187729724.jpg" class="section-image" alt="Hombres sembrando">
+                <p>
+                    Un estilo de vida sostenible es aquel que se enfoca en reducir la huella ecológica y promover la conservación del medio ambiente, al mismo tiempo que se garantiza 
+                    la salud y el bienestar personal y de la comunidad en general.
+                </p>
+                <p>
+                    Este estilo de vida se basa en el uso responsable y consciente de los recursos naturales, como son el agua, la energía, los alimentos y los materiales, con el objetivo 
+                    de minimizar el impacto ambiental negativo que se genera a partir del consumo excesivo y no sostenible de estos recursos.
+                </p>
+                <p>
+                    Un estilo de vida sostenible también incluye la adopción de prácticas que promuevan la equidad social y la justicia ambiental, y que fomenten la protección 
+                    de la biodiversidad y la preservación de los ecosistemas.
+                </p>
+            </div>
+            <div class="container-section">
+                <h3>Factores que influyen en un estilo de vida sostenible</h3>
+                <p>
+                    Alcanzar este estilo de vida no depende solo de factores individuales, sino que también existen factores 
+                    colectivos y externos que influyen en tus posibilidades de lograrlo.
+                </p>
+                <ul>
+                    <li>
+                        <b>Políticas públicas:</b> estas  pueden fomentar o dificultar el acceso a prácticas y recursos sostenibles. Por ejemplo, incentivos fiscales 
+                        para el uso de energías renovables o políticas de reciclaje pueden promover hábitos sostenibles.
+                    </li>
+                    <li class="list">
+                        <b>Cultura y valores sociales:</b> las creencias y valores compartidos dentro de una comunidad pueden influir en la adopción de comportamientos sostenibles, 
+                        así como en la aceptación y apoyo a políticas y prácticas sostenibles.
+                    </li>
+                    <li class="list">
+                        <b>Nivel socioeconómico:</b> las limitaciones económicas pueden dificultar la adopción de hábitos y prácticas sostenibles, ya que a menudo están asociados 
+                        con costos adicionales o mayores.
+                    </li>
+                    <li class="list">
+                        <b>Tecnologías y recursos:</b> la disponibilidad de tecnologías y conocimientos sostenibles, como la energía solar o la agricultura ecológica, 
+                        pueden facilitar la adopción de prácticas más sostenibles.
+                    </li>
+                </ul>
+            </div>
+            <p><b>Fuentes:</b> <a href="https://www.iberdrola.com/sostenibilidad/estilo-de-vida-sostenible#:~:text=Llevar%20un%20estilo%20de%20vida%20sostenible%20es%20m%C3%A1s,permitir%C3%A1%20preservar%20el%20planeta%20para%20las%20generaciones%20venideras." target="_blank">Iberdrola</a></p>
+        </article>
+    </main>
+{% endblock %}

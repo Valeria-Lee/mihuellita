@@ -1,0 +1,113 @@
+{% extends '../layouts/base.html' %}
+
+{% block content %}
+    <style>
+    /* Estilo del main y de cada article */
+    .main {
+        width: 80%;
+        margin: auto;
+        font-family: 'Roboto', sans-serif;
+        font-size: 1.2rem;
+    }
+
+    article {
+        padding: 1.5em;
+        margin-top: 0.8em;
+    }
+
+    article h2 { 
+        font-weight: 800;
+        font-size: 1.5em;
+    }
+
+    .author-name{
+        font-size: 0.85em;
+    }
+
+    article p {
+        margin-top: 1.2rem;
+        text-align: justify;  
+        line-height: 1.5;
+    }
+
+    .article-image {
+        width: 100%;
+    }
+
+    .container-section {
+        margin-top: 2.3rem;
+        overflow: hidden;
+    }
+
+    .container-section h3 {
+        font-weight: bold;
+    }
+
+    article a {
+        color: #333;
+        text-decoration: underline;
+    }
+
+    /* La imagen que se despliega a la derecha del texto */
+    .section-image {
+        width: 38%;
+        float: right;
+        margin-left: 1.5rem;
+    }
+    </style>
+    <main class="main">
+        <article>
+            <h2>¿Cómo vivir de forma más sostenible con el ambiente?</h2>
+            <p class="author-name">Elaborado por: <b>Miguel Alejandro Torruco</b>, el 30 de abril de 2023</p>
+            <img src="https://d1ih8jugeo2m5m.cloudfront.net/2022/04/acciones-de-una-empresa-socialmente-responsable-y-sustentable.jpg" class="article-image" alt="Una planta">
+
+            <!-- Introducción -->
+            <p>
+                El concepto de sostenibilidad nos puede parecer muy grande y complejo. Sin embargo, en lo referente a nuestras acciones, si todos ponemos nuestro granito de arena, sumaría mucho. 
+            </p>
+            <p>
+                Todos y cada uno de nosotros tenemos la capacidad de crear un cambio positivo mediante las decisiones y acciones que 
+                realizamos cada día. En este artículo te proponemos algunos consejos para poder llevar un estilo de vida más sostenible.
+            </p>
+
+            <!-- Desarrollo, donde se expone cada consejo -->
+            <div class="container-section">
+                <h3>Compra menos</h3>
+                <p>
+                    Aproximadamente <b>dos tercios</b> de los productos que compramos acaban convertidos en <b>residuos</b>. Por lo tanto, la salud 
+                    del planeta y del medio ambiente depende de que todos compremos de forma sostenible únicamente aquello que necesitemos, 
+                    con la posibilidad de poder <b>reutilizarlo</b> cuando hayamos terminado.
+                </p>
+                <p>La meta es alcanzar una economía circular en la que utilicemos los recursos con moderación y reciclemos constantemente. Una economía así equilibraría las necesidades de la sociedad con la de nuestro planeta.</p>
+            </div>
+            <div class="container-section">
+                <h3>Reduce el gasto de electricidad</h3>
+                <p>
+                    Plantéate diversas alternativas. Puedes instalar un contador inteligente para gestionar y vigilar tu gasto de energía y reducir las emisiones de carbono. Aunque comprar y montar paneles solares es una inversión 
+                    considerablemente grande, en pocos años serías autónomo en relación a la energía eléctrica.
+                </p>
+            </div>
+            <div class="container-section">
+                <h3>Reduce el consumo de plásticos</h3>
+                <img src="https://media.admagazine.com/photos/618a61c8e702c61c265bbb71/master/w_1600,c_limit/81810.jpg" class="section-image" alt="Bolsa de tela">
+                <p>
+                    Otro de los principales hábitos que hay que adoptar es reducir el consumo
+                    de plástico, uno de los materiales más comunes en la vida diaria. Aunque la mayoría de tiendas ya no dan bolsas de plástico, un buen tip es
+                    siempre llevar una <b>bolsa de tela </b> para realizar las compras.
+                </p>
+                <p>Evita los productos desechables como los popotes y las botellas de plástico, y, en caso de no ser posible, trata de reutilizar todos aquellos envases y utensilios de plástico.</p>
+            </div>
+            <div class="container-section">
+                <h3>Acorta las duchas</h3>
+                <p>
+                    Menos del 1% del agua de la Tierra es dulce y accesible. Adoptar consejos para ahorrar agua en la ducha y en otras actividades ayudará a conservar nuestras reservas de agua. Una ducha media de cinco minutos, por ejemplo, 
+                    gastará <b>45 litros de agua</b>; reducir la duración a la mitad o evitar duplicarla puede repercutir en el ahorro del agua y en la energía eléctrica.
+                </p>
+                <p>Podemos adoptar otros consejos en relación al cuidado del agua. Por ejemplo, 
+                cerrar la llave mientras nos enjabonamos, nos cepillamos los dientes o lavamos los platos, puede hacer una gran diferencia. 
+                </p>
+            </div>
+            <p><b>Fuentes:</b> <a href="https://www.nationalgeographic.es/medio-ambiente/2021/04/28-ideas-para-vivir-de-forma-mas-sostenible-en-el-planeta" target="_blank">National Geographic</a></p>
+        </article>
+    </main>
+{% endblock %}

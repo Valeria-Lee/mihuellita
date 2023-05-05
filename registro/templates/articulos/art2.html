@@ -1,0 +1,123 @@
+{% extends '../layouts/base.html' %}
+
+{% block content %}
+    <style>
+        .main {
+            width: 80%;
+            margin: auto;
+            font-family: 'Roboto', sans-serif;
+            font-size: 1.2rem;
+        }
+        
+        article {
+            padding: 1.5em;
+            margin-top: 0.8em;
+        }
+        
+        article h2 { 
+            font-weight: 800;
+            font-size: 1.5em;
+        }
+        
+        .author-name{
+            font-size: 0.85em;
+        }
+        
+        article p {
+            margin-top: 1.2rem;
+            text-align: justify;  
+            line-height: 1.5;
+        }
+        
+        .article-image {
+            width: 100%;
+            margin-top: 1rem;
+            margin-bottom: 1rem;
+        }
+        
+        .container-section {
+            margin-top: 2.3rem;
+            overflow: hidden;
+        }
+        
+        .container-section h3 {
+            font-weight: bold;
+        }
+        
+        .container-section ul {
+            list-style-position: inside;
+        }
+        
+        article a {
+            color: #333;
+            text-decoration: underline;
+        }
+        
+        /* La imagen que se despliega a la izquierda del texto */
+        .section-image {
+            width: 38%;
+            float: left;
+            margin-top: 1rem;
+            margin-right: 1rem;
+        }        
+    </style>
+    <main class="main">
+        <article>
+            <h2>¿Cómo contaminan los plásticos al medio ambiente?</h2>
+            <p class="author-name">Elaborado por: <b>Miguel Alejandro Torruco</b>, el 30 de abril de 2023</p>
+            <img src="https://www.greenpeace.org/static/planet4-mexico-stateless/2022/06/031228ee-gp0stt3fe_web_size_with_credit_line.jpg" class="article-image" alt="Cangrejo atrapado dentro de un vaso de plástico">
+            
+            <!-- Introducción -->
+            <p>
+                La acción contaminante es cuando se introducen sustancias tóxicas a un 
+                medio ambiente. La contaminación por plásticos es uno de los principales retos medioambientales 
+                en nuestra actualidad, ya que el proceso de producción y destrucción de los mismos contaminan de manera exponencial los ecosistemas. 
+            </p>
+
+            <!-- Procedemos a exponer cada punto en el desarrollo -->
+            <div class="container-section">
+                <h3>Algunas cifras</h3>
+                <img src="https://www.camelbak.com/dw/image/v2/BDBJ_PRD/on/demandware.static/-/Library-Sites-CamelBakSharedLibrary/default/dw576682b3/images/Ditch%20Disposable/Ditch_Disposable_Sidekick.jpg?sw=468&sfrm=jpg" class="section-image" alt="Plásticos en la playa">
+                <p>
+                    Al ritmo que vamos, se calcula que para el 2050 habrá <b>12 mil millones</b> de toneladas de residuos plásticos contaminando nuestro planeta.
+                </p>
+                <p>
+                    La Organización de las Naciones Unidas (ONU) declaró que al año se producen alrededor de <b>300 mil millones</b> de toneladas 
+                    de residuos plásticos. La descomposición de los plásticos sobrepasan los 100 años, 
+                    razón por la cual el acumulo de los mismos cada vez aumenta. 
+                </p>
+                <p>
+                    El Programa de las Naciones Unidas para el Medio Ambiente (PNUMA) muestra que actualmente son 199 millones de toneladas 
+                    de desechos plásticos en el océano, los cuales representan un mínimo de 85 por ciento de todos los desechos marinos.
+                </p>
+            </div>
+            <div class="container-section">
+                <h3>¿Cuánto tiempo tardan en degradarse?</h3>
+                <p>Los plásticos tardan bastante tiempo en descomponerse. Por ejemplo:</p>
+                <ul>
+                    <li><b>Botellas:</b> 500 años</li>
+                    <li><b>Cubiertos:</b> 400 años</li>
+                    <li><b>Popotes:</b> 100 años</li>
+                    <li><b>Bolsas de plástico:</b> 55 años</li>
+                    <li><b>Vasos de plástico:</b> 75 años</li>
+                </ul>
+            </div>  
+            <div class="container-section">
+                <h3>¿Qué podemos hacer?</h3>
+                <p>Existen algunas acciones que podemos realizar para evitar el uso de los plásticos y su contaminación.</p>
+                <p>La contaminación por plásticos se puede atacar desde diversas vertientes, tanto de manera individual como colectiva.</p>
+                <p>
+                    En el plano individual, podemos evitar el uso de desechables de un sólo uso, hacer uso de vasos y cubiertos no desechables. 
+                    Las bolsas de tela, los tuppers o utensilios reutilizables son una excelente opción.
+                </p>
+                <p>
+                    De manera colectiva, podemos incentivar a las nuevas generaciones a rechazar el uso de los plásticos de un sólo uso, generar educación 
+                    ambiental y ecológica para crear una nueva ola de conciencia ambiental. 
+                    De manera social, debemos exigirle a las empresas e industrias que eviten la producción de los plásticos de este tipo y que apuesten por la 
+                    producción de envases reutilizables.
+                </p>
+            </div>  
+            <p><b>Fuentes:</b> <a href="https://www.greenpeace.org/mexico/blog/51397/como-contaminan-los-plasticos-al-medio-ambiente/" target="_blank">Greenpeace</a></p>
+        </article>
+    </main>
+{% endblock %}

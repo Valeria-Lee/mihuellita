@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="icon" type="image/png" href="../../../static/img/MI.png">
+        <link rel="stylesheet" href="css/estadisticas.css">
+        <!-- aqui se importa el bootstrap junto con los script -->
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css">
+        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js"></script>
+        <link rel="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.1/css/fontawesome.min.css">
+        <title>MiHuellita</title>
+    </head>
+    <body>
+        <style>
+          @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
+          /* Importamos la fuente Roboto de Google Fonts */
+
+            * {
+                margin: 0;
+                padding: 0;
+                box-sizing: border-box; 
+            }
+            
+            html {
+                background-color: aliceblue;
+                font-family: 'Roboto', sans-serif;
+                font-size: 1.2rem;
+            }
+            
+            
+            section{ /* section lo use para lo que cubre el navbar - chable */
+                color: azure;
+                background-color: rgb(107, 134, 64);
+                padding: 0.35em;
+            }
+
+            .registro-container{
+                text-align: right;
+            }
+
+            .nav-link{
+                font-size: x-large;
+                color:aliceblue;
+                margin-left: 15px;
+                margin-right: 20px;
+            }
+            
+            .navbar-brand{
+                font-size: xx-large;
+                color: aliceblue;
+                margin-left: 15px;
+                margin-right: 30px;
+                padding: 0.25em;
+            }
+            
+            .container-fluid a:hover{
+                color: rgb(146, 141, 139);
+            }
+
+            #registro-container{
+                text-align: right;
+            }
+
+            /* Estilo del footer */
+        .footer {
+            margin-top: 1.3em;
+            background-color: crimson;
+            padding: 1.8em;
+        }
+
+        .footer p {
+            color: rgb(223, 233, 241);
+        }
+
+        .footer p a {
+            color: rgb(188, 193, 197);
+            font-weight: 800;
+            text-decoration: none;
+        }
+
+        .footer p a:hover {
+            color: black;
+            font-weight: bolder;
+            text-decoration: underline;
+        }
+
+        /* Estilo del footer */
+        .footer {
+            font-family: 'Roboto', sans-serif;
+            margin-top: 1.3em;
+            background-color: #0F1A20;
+            padding: 1.5em;
+        }
+
+        .footer p {
+            color: rgb(223, 233, 241);
+            margin-bottom: 0;
+        }
+
+        .footer__p {
+            margin-top: 0.8rem;
+        }
+
+        /* Estilos del link de contacto */
+        .contacto {
+            color: rgb(188, 193, 197);
+            font-weight: 600;
+            text-decoration: underline;
+        }
+
+        .contacto:hover {
+            color: rgb(151, 154, 156);
+            font-weight: bolder;
+            text-decoration: underline;
+        }
+        </style>
+    <!-- Se implementa el navbar de Bootstrap -->
+    <section id="nav-bar">
+      <nav class="navbar navbar-expand-lg bg-body-tertiary">
+          <div class="container-fluid">
+            {% load static %}
+            <a class="navbar-brand" href="{% url 'index' %}"><img src="{% static '/img/MI.png' %}" width="75px" height="75px" alt="Nuestro logo"></a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+              <ul class="navbar-nav">
+                <li class="nav-item">
+                  <a class="nav-link" href="{% url 'consejos' %}">Blog</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="{% url 'estadisticas' %}">Estadisticas</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="{% url 'registrar' %}">Registro</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="{% url 'acerca' %}">Acerca de</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </nav>
+  </section>
+        {% block content %}
+        {% endblock %}
+        <footer class="footer">
+          <p>Creado por el equipo de <a href="acerca_de.html" class="contacto">Mi Huellita</a></p>
+          <p class="footer__p"><em>© Todos los derechos reservados 2023</em></p>
+          <p class="footer__p"><a href="mailto:mihuellitaproyecto@gmail.com" target="_blank"
+              class="contacto">Contáctanos</a>
+          </p>
+      </footer>
+    </body>
+</html>

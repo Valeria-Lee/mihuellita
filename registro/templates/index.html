@@ -1,0 +1,125 @@
+{% extends 'layouts/base.html' %}
+
+{% block content %}
+    <style>
+        /* Estilos del banner y el texto */
+        .main-image {
+            position: relative;
+            background: url({% load static %}{% static '/img/banner.jpg' %}) no-repeat center;
+            background-size: cover;
+            height: 800px;
+            overflow: hidden;
+        }   
+
+        .main-image h1 {
+            font-weight: 800;
+        }
+
+        .text-container {
+            width: 80%;
+            text-align: justify;
+        }
+
+        .container {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            text-align: center;
+            color: azure;
+            font-weight: 700;
+            text-transform: uppercase;
+        }
+
+        .container h1 {
+            margin: 0;
+            font-size: 70px;
+        }
+
+        .container h1 span {
+            padding: 6px 14px;
+            display: inline-block;
+        }
+
+        .cen {
+            margin: 20px;
+            display: block;
+            font-size: 22px;
+            padding: 0.75em;    
+        }
+
+        /* Botón de "Conócenos" */
+        .button {
+            color: black;
+            font-weight: 900;
+            padding: 10px;
+            background: white;
+            text-decoration: none;
+            border-radius: 12px;
+            transition: .6s;
+            padding: .8em;
+        }
+
+        .button:hover {
+            opacity: .6;
+        }
+
+        .article-text {
+            width: 95%;
+            margin: auto;
+        }
+
+        .article-text h2 {
+            font-weight: bold;
+            width: 80%;
+            text-align: center;
+        }
+
+        .text-container ul {
+            list-style-position: inside;
+        }
+    </style>
+    <main class="main">
+        <div class="main-image">
+          <div class="container">
+            <h1><span>Mi Huellita</span></h1>
+            <span class="cen">Educación Ambiental para la Sustentabilidad</span>
+            <a class="button" href="{% url 'acerca' %}" id="legend">Conócenos</a>
+          </div>
+        </div>
+        <article class="article-text">
+          <div style="display: flex; justify-content: center; margin-top: 3em;">
+            <div style="flex: 1; margin: 15px 10px;">
+              <h2>Misión</h2>
+              <div class="text-container">
+                <p>Nuestra misión es promover la educación ambiental y conciencia sobre el desarrollo sustentable para
+                  lograr un cambio positivo en nuestra comunidad y en el mundo en general.
+                  Trabajamos para informar y educar a la gente sobre la importancia de preservar y proteger
+                  el medio ambiente, a través de datos y herramientas accesibles en nuestra plataforma en línea.
+                </p>
+              </div>
+            </div>
+            <div style="flex: 1; margin: 15px 10px;">
+              <h2>Visión</h2>
+              <div class="text-container">
+                <p>Queremos ser promotores del desarrollo sustentable y de la educación ambiental a nivel local.
+                  Nos esforzamos por crear un mundo donde las personas estén comprometidas
+                  en cuidar y preservar el medio ambiente para las generaciones futuras.
+                </p>
+              </div>
+            </div>
+            <div style="flex: 1; margin: 15px 10px;">
+              <h2>Valores</h2>
+              <div class="text-container">
+                <ul>
+                  <li>Compromiso con la educación y conciencia ambiental.</li>
+                  <li>Honestidad y transparencia en la presentación de datos e información.</li>
+                  <li>Responsabilidad social y ambiental.</li>
+                  <li>Trabajo en equipo y colaboración con la comunidad para lograr nuestros objetivos.</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </article>
+      </main>
+{% endblock %}

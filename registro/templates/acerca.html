@@ -1,0 +1,79 @@
+{% extends 'layouts/base.html' %}
+
+{% block content %}
+    <style>
+    /* Estilo del main y de cada article */
+    .main {
+        width: 90%;
+        margin: 0.5rem;
+        font-size: 1.2rem;
+    }
+
+    .article {
+        padding: 0.1em;
+        margin-top: 0.8em;
+        /* background-color: aquamarine; */
+    }
+
+    .article h2 {
+        font-size: 2.2em;
+    }
+
+    .article p {
+        width: 90%;
+        margin-top: 0.2rem;;
+        text-align:left;  
+        line-height: 1.5;
+    }
+
+    img {
+        margin-top: 5%;
+    }
+    </style>
+    <main class="main">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-8">
+                    <article class="article">
+                        <h2>¿Quiénes somos?</h2>
+                        <p>
+                            Somos un grupo de alumnos de la facultad de ingenieria proveniente de la Universidad Autonóma de Campeche
+                            así como aficionados del minecraft. Actualmente cursando la carrera de "Ingenieria en Tecnologias de
+                            Software". Los integrantes de nuestro equipo son: Miguel Alejandro, José Chable, Luis Reyes, Raúl Sosa y
+                            Valeria Lee.           
+                        </p>
+                        <p>
+                            Nos sentimos responsables de realizar un cambio en nuestra comunidad y es gracias a nuestra docente que nos
+                            incentiva a cambiar nuestra forma de pensar hacia una visión más humanitaria y cambiar nuestros hábitos para
+                            adaptarnos a un estilo de vida más sostenible que decidimos crear este proyecto fusionando nuestros conocimientos.
+                        </p>
+                    </article>
+                </div>
+                <div class="col-4">
+                    {% load static %}
+                    <img src="{% static '/img/pared.jpg' %}" alt="Integrantes de MiHuellita posando en una pared" width="500" height="auto">
+                </div>
+            </div>
+            <div class="row justify-content-center">
+                <div class="col-8">
+                    <article class="article">
+                        <h2>¿Qué hacemos?</h2>
+                        <p>
+                            A partir de las habilidades que cuenta cada uno de los integrantes de nuestro equipo, hemos llegado a este 
+                            resultado. Nuestro objetivo de este proyecto es mediante el uso de los TICs hacer llegar a nuestra comunidad
+                            noticias y acontecimientos sobre la situación ambiental de nuestro estado, el estado de Campeche.                  
+                        </p>
+                        <p>
+                            Queremos lograr hacer la información accesible mediante noticias, artículos, consejos y correos electrónicos
+                            personalizados para nuestros usuarios.             
+                        </p>
+                    </article>
+                </div>
+                <div class="col-4">
+                    {% load static %}
+                    <img src="{% static '/img/escaleras.jpg' %}" alt="Integrantes de MiHuellita posando en las escaleras" width="500" height="auto">
+                </div>
+            </div>
+        </div>
+    </main>
+{% endblock %}

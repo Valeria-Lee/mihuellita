@@ -1,0 +1,83 @@
+{% extends 'layouts/base.html' %}
+
+{% block content %}
+    <style>
+    @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
+    /* Importamos la fuente Roboto de Google Fonts */
+
+    /* Estilo del main y de cada article */
+    .main {
+        width: 90%;
+        margin: auto;
+        font-family: 'Roboto', sans-serif;
+        font-size: 1.2rem;
+    }
+    
+    .article {
+        padding: 1.2em;
+        /* margin-top: 0.8em; */
+    }
+    
+    /* El estilo de cada encabezado h2 dentro de la clase article */
+    .article h2 {
+        font-weight: 700;
+        font-size: 1.5em;
+    }
+    
+    #article-1 {
+        margin-top: 1rem;
+    }
+    
+    .article p {
+        width: 80%;
+        margin-top: 1.2rem;;
+        text-align: left;  
+        line-height: 1.5;
+    }
+    
+    /* Estilo del form */
+    #h2_form {
+        margin-bottom: 1.3rem;
+    }
+    
+    .input, #boton {
+        padding-left: 0.5rem;
+        padding-right: 0.5rem;
+        font-size: 0.9em;   
+    }
+    
+    .container-email {
+        margin-top: 0.8rem;
+    }
+    
+    #boton {
+        margin-top: 0.8rem;
+    }
+    </style>
+    <main>
+    <article class="article" id="article-1">
+        <h2>¿Quieres saber qué puedes hacer por el planeta?</h2>
+        <p>
+            Ingresa tu correo y suscríbete para recibir más contenido y consejos sobre cómo cuidar el ambiente
+            y llevar un estilo de vida sostenible y amigable con la naturaleza
+        </p>
+    </article>
+    <article class="article">
+    <h2 id="h2_form">Ingresa tus datos</h2>
+    <p><b>Suscríbete a nuestro newsletter</b></p>
+    <form method="POST" class="form">
+        {% csrf_token %}
+        {{form.as_p}}
+        <button class="btn btn-dark">Guardar</button>
+    </form>
+    {% if form.non_field_errors %}
+    <div class="alert alert-danger">
+        {% for error in form.non_field_errors %}
+            <strong>Error:</strong>
+            {{ error|escape }}<br>
+        {% endfor %}
+    </div>
+    {% endif %}
+    </article>
+    </main>
+{% endblock %}

@@ -1,0 +1,166 @@
+{% extends 'layouts/base.html' %}
+
+{% block content %}
+    <style>
+        /* Estilo del main y de cada article */
+        .main {
+            width: 70%;
+            margin: auto;
+            font-family: 'Roboto', sans-serif;
+            font-size: 1.2rem;
+        }
+
+        .article {
+            padding: 1.5em;
+            margin-top: 0.8em;
+        }
+
+        /* El estilo de cada encabezado h2 dentro de la clase article */
+        .article h2 {
+            font-weight: 800;
+            font-size: 1.7em;
+        }
+
+        .article p {
+            margin-top: 1.2rem;;
+            text-align: left;  
+            line-height: 1.5;
+        }
+
+        /* Estilos de los articles referentes a los consejos */
+        .consejo {
+            border: 1px solid lightgrey;
+            border-radius: 0.6rem;
+            background-color: whitesmoke; 
+            /* Transición */
+            transition: box-shadow 0.3s ease;
+        }
+
+        /* Al pasar el mouse por encima se muestra una sombra al elemento */
+        .consejo:hover {
+            box-shadow: 0.1rem 0.3rem 0.4rem rgba(0, 0, 0, 0.3);
+        }
+
+        .consejo h2 {
+            font-size: 1.2em;
+        }
+
+        .consejo p {
+            width: 50%;
+            text-align: justify;
+            line-height: 1.4;
+        }
+
+        /* Los estilos para el título, el cual es un enlace */
+        .consejo h2 a {
+            color: black;
+            text-decoration: none;
+        }
+
+        .consejo h2 a:hover {
+            color: rgb(3, 80, 3);
+            text-decoration: underline;
+            font-weight: 900;
+        }
+
+        /* Los estilos para los enlaces que dicen "Ver artículo" */
+        .ver-art {
+            color: #333;
+            font-weight: bold;
+            text-decoration: underline;
+        }
+
+        .ver-art:hover {
+            color: rgb(3, 80, 3);
+            font-weight: 900;
+        }
+
+        .content {
+            overflow: hidden;
+        }
+
+        /* Estilo aplicado a todas las imágenes, menos el margin-top de la primera, que se sobreescribe después */
+        .content img {
+            float: right;
+            margin-top: 0.7rem;
+            margin-left: 2rem;
+        }
+
+        /* La primer imagen no tiene un margin-top */
+        #img-plantas {
+            margin-top: 0;
+        }
+
+        #article-2, #article-3, #article-4 {
+            margin-top: 3rem;
+        }
+    </style>
+    <main class="main">
+		<article class="article">
+			<h2>Artículos, tips y consejos</h2>
+			<p>
+				En esta sección te ofrecemos información sobre temas relacionados al medio ambiente y a la
+				contaminación, además de distintos consejos sobre cómo llevar un estilo de vida más sostenible con el ambiente. Aquí encontrarás
+				distintos artículos con información relevante y con consejos para ayudar a proteger al medio ambiente desde tu vida cotidiana.
+			</p>
+		</article>
+		<!-- Entrada del primer artículo -->
+		<article class="article consejo">
+			<h2><a href="{% url 'articulo1' %}" target="_blank">Cambios en la vida cotidiana</a></h2>
+			<div class="content">
+				<img src="https://static.nationalgeographic.es/files/styles/image_3200/public/markus-spiske-4pg6wllvag4-unsplash.webp?w=710&h=474"
+					width="410px" alt="Macetas" id="img-plantas">
+				<p>
+					Los cambios deben empezar en el <b>hogar</b>. Lo que hacemos en nuestros hogares puede tener
+					repercusiones directas en los
+					ecosistemas más vitales del mundo. Lo único que necesitamos es pasar a la acción.
+				</p>
+				<a href="{% url 'articulo1' %}" target="_blank" class="ver-art">Ver artículo</a>
+			</div>
+		</article>
+
+		<!-- Entrada del segundo artículo -->
+		<article class="article consejo" id="article-2">
+			<h2><a href="{% url 'articulo2' %}" target="_blank">¿Cómo contaminan los plásticos al medio ambiente?</a></h2>
+			<div class="content">
+				<img src="https://degradable.com.pe/wp-content/uploads/2018/03/Sin-t%C3%ADtulo-1-1.jpg" width="410px"
+					alt="Bolsa de plástico en el mar">
+				<p>
+					La <b>contaminación por plásticos</b> es uno de los principales retos medioambientales en nuestra
+					actualidad. Su proceso de producción y destrucción contaminan de
+					manera exponencial los ecosistemas. Descubre de qué forma.
+				</p>
+				<a href="{% url 'articulo2' %}" target="_blank" class="ver-art">Ver artículo</a>
+			</div>
+		</article>
+
+		<!-- Entrada del tercer artículo -->
+		<article class="article consejo" id="article-3">
+			<h2><a href="{% url 'articulo3' %}" target="_blank">Qué es un estilo de vida sostenible y cómo lograrlo</a></h2>
+			<div class="content">
+				<img src="https://www.grupodigital.eu/blog/wp-content/uploads/2020/02/estilo-de-vida-saludable-y-sostenible.jpg"
+					width="410px" alt="Personas en el campo">
+				<p>
+					Conoce más sobre el concepto de "estilo de vida sostenible" y los factores que influyen en él,
+					además de distintos consejos para lograr
+					hábitos sostenibles, como complemento de los consejos en la vida cotidiana.
+				</p>
+				<a href="{% url 'articulo3' %}" target="_blank" class="ver-art">Ver artículo</a>
+			</div>
+		</article>
+		<!-- Entrada del cuarto y último artículo -->
+		<article class="article consejo" id="article-4">
+			<h2><a href="{% url 'articulo_chable' %}" target="_blank">Educación ambiental: El camino hacia un futuro sostenible</a></h2>
+			<div class="content">
+				<img src="https://th.bing.com/th/id/OIP.Hr9ynf6M84h-0QAlfy__agAAAA?pid=ImgDet&rs=1"
+					width="410px" alt="Personas en el campo">
+				<p>
+					La <b>educación ambiental</b> es fundamental para lograr la sostenibilidad, porque nos ayuda a comprender
+					las verdaderas causas de los problemas, y nos aporta un pensamiento crítico. Descubre más sobre ella en 
+					este artículo.
+				</p>
+				<a href="{% url 'articulo_chable' %}" target="_blank" class="ver-art">Ver artículo</a>
+			</div>
+		</article>
+	</main>
+{% endblock %}

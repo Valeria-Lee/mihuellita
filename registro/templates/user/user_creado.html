@@ -1,0 +1,29 @@
+{% extends 'layouts/base.html' %}
+
+{% block content %}
+    <style>
+        .contenedor {
+            height: 300px;
+            text-align: center;
+            background-color: #e5e5f7;
+            opacity: 0.8;
+            background-image:  radial-gradient(#a5c0ad 0.8px, transparent 0.8px), radial-gradient(#a5c0ad 0.8px, #e5e5f7 0.8px);
+            background-size: 32px 32px;
+            background-position: 0 0,16px 16px;
+        }
+
+        h2 {
+            margin-top: 20px;
+            padding: 20px;
+        }
+
+        p {
+            padding: 10px;
+            margin-down: 30px;
+        }
+    </style>
+    <div class="contenedor">
+    <h2>Se ha guardado su correo exitosamente!</h2>
+    <p>Espere nuestro correo de confirmación. Le agradecemos por tomar en cuenta al medio ambiente. 🌱</p>
+    </div>
+{% endblock %}
